@@ -7,38 +7,56 @@
     <title>Document</title>
     <!-- Imports -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet"/> 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="./style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <div data-aos='menu-trigger' data-aos-anchor-placement="top-top" class='empty menu-trigger'></div>
+    <nav id='nav' class='nav-cover'>
+        <div><a href=''>Home</a></div>
+        <div><a href='#about'>About</a></div>
+        <div><a href='#projects'>Projects</a></div>
+        <div><a href='#contact'>Let's Talk</a></div>
+    </nav>
     <div class='main-container'>
-        <div id='cover-container' class='cover-container'>
-            <nav>
-                <div><a href=''>Home</a></div>
-                <div><a href='#about'>About</a></div>
-                <div><a href='#projects'>Projects</a></div>
-                <div><a href='#contact'>Let's Talk</a></div>
-            </nav>
-            <div id='cover' class='cover'>
-                <div class='center-panel'>
-                    <div class='welcome-text'>
-                        <p>Hi! My name is Sterling. I am a web developer ready to help you with your projects.</p>
-                    </div>
-                    <div class='tech-icon-container'>
-                        <img src='../images/HTML5_Logo.svg' alt='html5'>
-                        <img src='../images/CSS3_Logo.svg' alt='css5'>
-                        <img src='../images/JAVASCRIPT_Logo.svg' alt='javascript'>
-                        <img src='../images/NODE_logo.svg' alt='node'>
-                        <img src='../images/REACT_Logo.svg' alt='react'>
-                    </div>
+        <div id='cover' class='cover'>
+            <div class='menu-spacer'></div>
+            <div class='center-panel'> 
+                <div class='welcome-text'>
+                    <p>Hi! My name is Sterling. I am a web developer ready to help you with your projects.</p>
                 </div>
-                <img class='portrait' src='../images/man.png' alt='portrait'>                
-                <div class='spacer'></div>
+                <div class='tech-icon-container'>
+                    <img src='../images/HTML5_Logo.svg' alt='html5'>
+                    <img src='../images/CSS3_Logo.svg' alt='css5'>
+                    <img src='../images/JAVASCRIPT_Logo.svg' alt='javascript'>
+                    <img src='../images/NODE_logo.svg' alt='node'>
+                    <img src='../images/REACT_Logo.svg' alt='react'>
+                </div>
             </div>
+            <img class='portrait' src='../images/man.png' alt='portrait'>                
         </div>
         <section id='about'>about</section>
         <section id='projects'>projects</section>
         <section id='contact'>Let's Talk</section>
         <footer>Footer</footer>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        document.addEventListener('aos:in', ({ detail }) => {
+            const nav = document.getElementById('nav');
+            nav.classList.remove('nav-cover');
+            nav.classList.add('nav-sticky');
+            console.log('animated in', detail);
+        });
+
+        document.addEventListener('aos:out', ({ detail }) => {
+            const nav = document.getElementById('nav');
+            nav.classList.add('nav-cover');
+            nav.classList.remove('nav-sticky');
+            console.log('animated out', detail);
+        });
+    </script>
 </body>
 </html>
