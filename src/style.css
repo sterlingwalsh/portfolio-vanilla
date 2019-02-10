@@ -119,3 +119,140 @@ body, html{
 .cover-container{
     height: 100vh;
 }
+}
+
+/* Css nav */
+
+nav{
+    display: flex;
+}
+
+nav, nav * {
+    transition: width 1s, height 1s ease-in-out;
+    /* border: 1px solid black; */
+}
+
+.nav-cover{
+    position: absolute;
+    height: 100vh;
+    width: 480px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-cover > div{
+    min-width: 200px;
+    margin: 1.25rem;
+}
+
+.nav-cover a{
+    font-size: 2rem;
+}
+
+.nav-sticky{
+    position: fixed;
+    top: 0px;
+    left: 0px; 
+    width: 480px; 
+    height: 1vh;
+}
+
+.nav-sticky > div{
+    margin: .5rem;
+}
+
+.nav-sticky a{
+    font-size: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: rgb(59, 59, 77);
+    color: azure;
+    padding: .5rem;
+    border: 3px solid azure;
+    outline: 3px solid rgb(59, 59, 77);
+    display: inline-block;
+    transform-origin: left;
+}
+
+nav a:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+/* Css for image, tech icons */
+
+.cover{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(120deg, white 0%, rgb(59, 59, 77) 100%);
+}
+
+.menu-spacer{
+    min-width: 20vw;
+}
+
+.portrait{
+    align-self: flex-end;
+    max-height: 90vh;
+}
+
+.center-panel{
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-panel div{
+    flex-grow: 1;
+}
+
+.welcome-text{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.tech-icon-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tech-icon-container img{
+    height: 96px;
+    width: auto;
+    margin: 1rem;
+}
+
+section{
+    min-height: 500px;
+}
+
+.empty{
+    margin: 0;
+    padding: 0;
+    max-width: 0px;
+    max-height: 0px;
+    position: absolute;
+    left: -999;
+}
+
+.empty.menu-trigger{
+    top: 50vh;
+}
