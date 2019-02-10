@@ -1,0 +1,7 @@
+[data-aos="slide-down"]{
+    transform: translateY(-100%);
+    
+    &.aos-animate{
+        transform: translateY(0%);
+    }
+}

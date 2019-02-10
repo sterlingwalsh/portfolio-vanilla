@@ -5,4 +5,117 @@ body, html{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.project{
+    width: 360px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image-container{
+    position: relative;
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.project-image-container a img{
+    transition: all .5s ease-in-out;
+}
+
+.project .project-image-container:hover a img{
+    transform: scale(1.05);
+    filter: blur(8px);
+}
+
+.tech-card{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    transition: all .2s ease-out;
+    /* transform: translateY(200%); */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: .5em 0 1em 0;
+    padding:0 1em;
+}
+
+.project-link{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    font-size: 2rem;
+}
+
+.project-link{
+    text-decoration: none;
+}
+
+.project-image-container:hover .project-link{
+    opacity: 100;
+}
+/* 
+.project:hover .tech-card{
+    transform: translateY(0%);
+} */
+
+.tech-card img{
+    height: 30px;
+    width: auto;
+}
+
+.project-description{
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-description div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: -1em 1.5em 0 1.5em;
+    padding: 2em 1em 1em 1em;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 0px 0px 36px 36px;
+    transition: all .2s ease-out;
+    font-size: 1.25rem;
+    text-align: center;
+    
+}
+
+.sections{
+    background: linear-gradient(60deg, white 0%, rgb(59, 59, 77) 100%);
+}
+
+.cover-container{
+    height: 100vh;
 }
