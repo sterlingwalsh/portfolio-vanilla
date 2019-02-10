@@ -26,6 +26,7 @@ body, html{
     min-height: 480px;
     display: flex;
     flex-direction: column;
+    margin: 0 1em;
 }
 
 .project-image-container{
@@ -256,7 +257,6 @@ section{
 .empty.menu-trigger{
     top: 50vh;
 }
-
 
 .contact-container{
     display: flex;
